@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+    <head>
+<!--        <base href="file://\\10.110.9.63\LW_DEV\LABWARE-7\SERVER\COMMON\VISUALWORKFLOWS\">
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dialogextend.1_0_1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/lw-theme/jquery-ui-1.9.2.custom.css">
+        <script type="text/javascript" src="js/vwApp.js"></script>
+        <script type="text/javascript" src="js/vwMultiSelectTable.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/lw_vw.css">
+        <!-- VW Head Tag -->
+<!--        <script type="text/javascript" src="js/vwbootstrap.js"></script>
+        <script>	initializeVwBootstrap("");</script>
+        <link rel="stylesheet" href="css/jQuery-LW-V7/labware_jquery_ui.css">
+        <link rel="stylesheet" href="css/dataTables/labware_datatable.css">
+        <script type="text/javascript" src="js/jquery.dataTables.js"></script><script type="text/javascript" src="js/jquery.dataTables-typedetection.js"></script><script type="text/javascript" src="js/vwf.initialise.js"></script>
+        <!-- End VW Head Tag -->
+    </head>
+    <body style="background-color:rgb(25, 136, 139);">
+        <!-- Main Div -->
+        <div id="vw_main" class="vw_main" data-vw_workflow_name="_TEST" style="height: 1038px;">
+
+            <!-- Table: _TEST::TABLE1 -->
+            <div id="vw_test_dtable1_div" data-vw_gat="_TEST::TABLE1" class="vw_table_div" style="border-style: solid; left:60px; top:100px; width:269px; height:630px; z-index:1; position:absolute;">
+                <table class="vw_table" id="vw_test_dtable1_table" name="_TEST::TABLE1" data-vw_detail="_TEST::TABLE1">
+                    <thead>
+                        <tr>
+                            <th>Directories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-vw_linkname="..">
+                            <td><a>..</a></td>
+                        </tr>
+                        <tr data-vw_linkname=".git">
+                            <td><a>.git</a></td>
+                        </tr>
+                        <tr data-vw_linkname="FirstResponderKit">
+                            <td><a>FirstResponderKit</a></td>
+                        </tr>
+                        <tr data-vw_linkname="Powershell">
+                            <td><a>Powershell</a></td>
+                        </tr>
+                        <tr data-vw_linkname="Python">
+                            <td><a>Python</a></td>
+                        </tr>
+                        <tr data-vw_linkname="R Studio">
+                            <td><a>R Studio</a></td>
+                        </tr>
+                        <tr data-vw_linkname="Sort">
+                            <td><a>Sort</a></td>
+                        </tr>
+                        <tr data-vw_linkname="SQL">
+                            <td><a>SQL</a></td>
+                        </tr>
+                        <tr data-vw_linkname="SQL Projects">
+                            <td><a>SQL Projects</a></td>
+                        </tr>
+                        <tr data-vw_linkname="SQL Server Management Studio">
+                            <td><a>SQL Server Management Studio</a></td>
+                        </tr>
+                        <tr data-vw_linkname="Temp">
+                            <td><a>Temp</a></td>
+                        </tr>
+                        <tr data-vw_linkname="Webpages">
+                            <td><a>Webpages</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table: _TEST::TABLE2 -->
+            <div id="vw_test_dtable2_div" data-vw_gat="_TEST::TABLE2" class="vw_table_div" style="border-style: solid; left:350px; top:100px; width:269px; height:630px; z-index:1; position:absolute;">
+                <table class="vw_table" id="vw_test_dtable2_table" name="_TEST::TABLE2" data-vw_detail="_TEST::TABLE2">
+                    <thead>
+                        <tr>
+                            <th>Files</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-vw_linkname="Invoice customer check.sql">
+                            <td><a>Invoice customer check.sql</a></td>
+                        </tr>
+                        <tr data-vw_linkname="LabWare CTE Example.sql">
+                            <td><a>LabWare CTE Example.sql</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+			
+            <!-- Table: _TEST::BANNER -->
+            <div id="vw_test_dbanner_div" data-vw_gat="_TEST::BANNER" class="vw_banner_div vwfullwidth" style="left: 0px; top: 0px; width: calc((100% - 0px) - 0px); height: 59px; z-index: 0; position: absolute;">
+                <table class="vw_banner_table" title="Last Login:05/10/2022 13:22:19. Client:LIMS-SW" id="vw_test_dbanner_table" name="_TEST::BANNER" data-vw_detail="_TEST::BANNER">
+                    <thead>
+                        <tr>
+                            <th>Code Snippet Viewer</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <!-- Text: _TEST::LABEL1 -->
+            <div id="vw_test_dlabel1_div" data-vw_gat="_TEST::LABEL1" class="vw_text_div" style="border-style: solid; left:640px; top:100px; width:1000px; height:870px; z-index:1; position:absolute;">
+                <span id="vw_test_dlabel1_span" name="" class="vw_label" title="sqlData">
+						select PROJECT.NAME [Submission]<br>
+						, Format(DATE_CREATED, 'dd MMM yyyy') [Date Created]<br>
+						, LIST_ENTRY.VALUE [Submission Reason]<br>
+						, Case when OWNER = 'AHHC' then 'Health Certification' else 'Diagnostic' END [Case Manager]<br>
+						, CONTRACT_QUOTE.DESCRIPTION [Contract]<br>
+						, CASE WHEN MONTH(DATE_CREATED) > 6 THEN LTRIM(STR(YEAR(DATE_CREATED))) + '/' + LTRIM(STR(YEAR(DATE_CREATED) + 1)) <br>
+							ELSE LTRIM(STR(YEAR(DATE_CREATED) - 1)) + '/' + LTRIM(STR(YEAR(DATE_CREATED))) END [Fiscal Year]<br>
+						, TEXT_ID [Text ID]<br>
+						, TEST.TEST_NUMBER [Test Number]<br>
+						, RESULT.ANALYSIS<br>
+						, RESULT.REPORTED_NAME<br>
+						, NUMERIC_ENTRY <br>
+<br>
+						from PROJECT join SAMPLE on PROJECT.NAME = SAMPLE.PROJECT<br>
+						join TEST on SAMPLE.SAMPLE_NUMBER = TEST.SAMPLE_NUMBER<br>
+						join RESULT on TEST.TEST_NUMBER = RESULT.TEST_NUMBER<br>
+						join CONTRACT_QUOTE on T_CONTRACT_NUMBER = CONTRACT_QUOTE_NO<br>
+						join LIST_ENTRY on C_SUBMISSION_REASON = LIST_ENTRY.NAME and LIST_ENTRY.LIST = 'AH_SUB_REASON'<br>
+<br>
+						where RESULT.REPORTED_NAME = 'Number of Necropies'<br>
+						and RESULT.STATUS = 'A'<br>
+						and TEST.STATUS <> 'X' and SAMPLE.STATUS <> 'X'<br>
+<br>
+						UNION ALL<br>
+<br>
+						select PROJECT.NAME [Submission]
+						, Format(DATE_CREATED, 'dd MMM yyyy') [Date Created]
+						, IsNULL(LIST_ENTRY.VALUE, REASON_1) [Submission Reason]
+						, Case when OWNER = 'AHHC' then 'Health Certification' else 'Diagnostic' END [Case Manager]
+						, CONTRACT_QUOTE.DESCRIPTION [Contract]
+						, CASE WHEN MONTH(DATE_CREATED) > 6 THEN LTRIM(STR(YEAR(DATE_CREATED))) + '/' + LTRIM(STR(YEAR(DATE_CREATED) + 1)) 
+							ELSE LTRIM(STR(YEAR(DATE_CREATED) - 1)) + '/' + LTRIM(STR(YEAR(DATE_CREATED))) END [Fiscal Year]
+						, TEXT_ID [Text ID]
+						, TEST.TEST_NUMBER [Test Number]
+						, 'AH_' + TEST.ANALYSIS [Analysis]
+						, RESULT.REPORTED_NAME
+						, NUMERIC_ENTRY 
+
+						from VICGOV_LW_VET.dbo.PROJECT join VICGOV_LW_VET.dbo.SAMPLE on PROJECT.NAME = SAMPLE.PROJECT
+						join VICGOV_LW_VET.dbo.TEST on SAMPLE.SAMPLE_NUMBER = TEST.SAMPLE_NUMBER
+						join VICGOV_LW_VET.dbo.RESULT on TEST.TEST_NUMBER = RESULT.TEST_NUMBER
+						join VICGOV_LW_VET.dbo.CONTRACT_QUOTE on PROJECT.CONTRACT_NUMBER = CONTRACT_QUOTE_NO
+						left join VICGOV_LW_VET.dbo.LIST_ENTRY on REASON_1 = LIST_ENTRY.NAME and LIST_ENTRY.LIST = 'REASON_1'
+
+						where RESULT.REPORTED_NAME = 'Number of Necropies'
+						and RESULT.STATUS = 'A'
+						and TEST.STATUS <> 'X' and SAMPLE.STATUS <> 'X'
+						and DATE_CREATED >= '2014-07-01'
+
+						ORDER BY [Fiscal Year], Submission, [Text ID]
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
